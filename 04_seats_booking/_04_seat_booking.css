@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&family=Protest+Riot&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 2px solid; */
+}
+
+body, #movie{
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-color: #242333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.movie-container{
+    margin: 20px 0;
+}
+
+.movie-container select{
+    background-color: #cad3f1;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    appearance: none;
+
+    /* -webkit-appearance: none; */
+}
+
+.seat{
+    background-color: rgba(227, 220, 220, 0.333);
+    height: 13px;
+    width: 15px;
+    margin: 3px;
+    border-radius: 10px 10px 0 0;
+}
+
+.seat.selected{
+    background-color: rgb(65, 245, 104);
+}
+
+.seat.occupied{
+    background-color: aqua;
+}
+
+.seat:nth-of-type(3){
+    margin-right: 18px;
+}
+
+.seat:nth-of-type(9){
+    margin-right: 18px;
+}
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.showcase.seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase, li{
+    background: #29283a;
+    color: #777;
+    border-radius: 5px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin:5px ;
+
+}
+
+.showcase li small{
+    margin-left: 5px;
+}
+
+.screen>#poster{
+    background-color:#cad3f1;
+    height: 175px;
+    width: 280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px 0;
+    border-top-left-radius: 70%;
+    border-top-right-radius: 70%;
+    transform: rotateX(-45deg);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    
+}
+.screen2{
+    background-color: none;
+    border: 40px solid #242333;
+    border-bottom-color: #242333;
+    border-left: none;
+    border-right: none;
+    height: 70px;
+    width: 100%;
+    margin-top: -70px;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    display: block;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 80%;
+    overflow: hidden;
+
+}
+
+.row{
+    display: flex;
+}
+
+p{
+    margin: 25px 0;
+}
+
+p.text span{
+    color: rgb(65, 245, 104);
+}
